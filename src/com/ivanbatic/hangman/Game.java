@@ -22,7 +22,7 @@ public class Game {
         do {
             String word = nextWord(4);
 
-            Round round = new Round(word.toLowerCase(), (String) wordlist.get(word), 20);
+            Round round = new Round(word.toLowerCase(), (String) wordlist.get(word), 14);
             round.start();
             System.out.println("Solution: " + round.word + " - " + round.explanation);
 
@@ -46,6 +46,4 @@ public class Game {
         } while (key.length() < minLength);
         return key;
     }
-
-
 }

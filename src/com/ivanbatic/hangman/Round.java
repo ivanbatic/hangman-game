@@ -30,7 +30,7 @@ class Round {
             System.out.printf("Word: %s\n", wordStatus.toString());
             System.out.print("Guess: ");
             String in = scanner.nextLine().toLowerCase();
-            if(in.length() == 0){
+            if (in.length() == 0) {
                 System.out.println("Please type in something.");
                 continue;
             }
@@ -66,6 +66,11 @@ class Round {
                 charactersToGuess--;
             }
         }
+
+        if (word.equals(wordStatus)) {
+            succeeded = true;
+        }
+
     }
 
     private void showHint() {

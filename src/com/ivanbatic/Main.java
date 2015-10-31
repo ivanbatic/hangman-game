@@ -9,14 +9,12 @@ import java.io.FileReader;
 
 public class Main {
 
-    public static int main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException {
         FileReader reader = new FileReader("data/english-dictionary.json");
         Object parsed = JSONValue.parse(reader);
         JSONObject dictionary = (JSONObject) parsed;
 
         Game game = new Game(dictionary);
         game.start();
-
-        return 0;
     }
 }
